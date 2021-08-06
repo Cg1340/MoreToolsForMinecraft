@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " B ",
+      " B ",
+      " C "
+    ],
+    "key": {
+      "C": {
+        "item": "moretools:long_stick"
+      },
+      "B": {
+        "item": "minecraft:bedrock"
+      }
+    },
+    "result": {
+      "item": "moretools:bedrock_sword",
+      "count": 1
+    }
+  }

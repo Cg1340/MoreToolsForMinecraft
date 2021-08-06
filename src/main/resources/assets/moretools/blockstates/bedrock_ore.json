@@ -1,0 +1,5 @@
+{
+    "variants": {
+      "": { "model": "moretools:block/bedrock_block" }
+    }
+  }

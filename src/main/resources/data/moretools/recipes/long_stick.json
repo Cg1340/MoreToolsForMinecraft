@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "  C",
+      " C ",
+      "C  "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "moretools:long_stick",
+      "count": 1
+    }
+  }
