@@ -21,7 +21,7 @@ public class Main implements ModInitializer {
 
 		System.out.println("Thank you playing the MORETOOLS Mod!");
 		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_sword"), CopperTool.COPPER_SWORD);//铜剑
-		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_shovel"), CopperTool.COPPER_SHOVEL);//铜qiu
+		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_shovel"), CopperTool.COPPER_SHOVEL);//铜锹
 
 		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_pickaxe"), CopperTool.COPPER_PICKAXE);//铜镐
 		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_axe"), CopperTool.COPPER_AXE);//铜斧
@@ -31,7 +31,6 @@ public class Main implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("moretools", "bedrock_sword"), BedrockTool.BEDROCK_SWORD);//基岩剑
 
 
-		Registry.register(Registry.ITEM, new Identifier("moretools", "bedrock_ore"), new BlockItem(BedrockOre.BEDROCK_ORE, new Item.Settings().group(Main.MORE_TOOLS_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier("moretools", "long_stick"), LongStick.LONG_STICK);
 		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_nugget"), CopperNugget.COPPER_NUGGET);
 

@@ -11,5 +11,6 @@
     "item.moretools.copper_pickaxe":"Copper Pickaxe",
     "item.moretools.copper_shovel":"Copper Shovel",
     "item.moretools.copper_sword":"Copper Sword",
-    "item.moretools.long_stick":"Long Stick"
+    "item.moretools.long_stick":"Long Stick",
+    "itemGroup.moretools.more_tools_group":"More Tools!"
 }

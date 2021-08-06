@@ -11,5 +11,6 @@
     "item.moretools.copper_pickaxe":"铜镐",
     "item.moretools.copper_shovel":"铜锹",
     "item.moretools.copper_sword":"铜剑",
-    "item.moretools.long_stick":"长木棍"
+    "item.moretools.long_stick":"长木棍",
+    "itemGroup.moretools.more_tools_group":"更多工具！"
 }
