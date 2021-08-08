@@ -16,7 +16,7 @@ public class CopperTool implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 1650;//My Computer's GPU is NV1650Ti  :D
+        return 1060;//My Computer's GPU is NV1060Ti  :D
     }
 
     @Override
