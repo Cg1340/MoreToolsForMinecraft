@@ -30,7 +30,16 @@ public class Main implements ModInitializer {
 			.build();
 
 
-
+		private static ConfiguredFeature<?, ?> BEDROCK_ORE_OVERWORLD = Feature.ORE
+			.configure(new OreFeatureConfig(
+					OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+					BedrockOre.BEDROCK_ORE.getDefaultState(),
+					4)) // Vein size
+			.range(new RangeDecoratorConfig(
+					// You can also use one of the other height providers if you don't want a uniform distribution
+					UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(16)))) // Inclusive min and max height
+			.spreadHorizontally()
+			.repeat(20); // Number of veins per chunk
 
 
 
@@ -41,7 +50,10 @@ public class Main implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-
+		RegistryKey<ConfiguredFeature<?, ?>> bedrockOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+				new Identifier("moretools", "bedrock_ore_overworld"));
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, bedrockOreOverworld.getValue(), BEDROCK_ORE_OVERWORLD);
+		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, bedrockOreOverworld);
 
 
 
@@ -58,7 +70,11 @@ public class Main implements ModInitializer {
 
 
 		Registry.register(Registry.ITEM, new Identifier("moretools", "long_stick"), LongStick.LONG_STICK);
+		Registry.register(Registry.ITEM, new Identifier("moretools", "bedrock_debris"), BedrockDebris.BEDROCK_DEBRIS);
 		Registry.register(Registry.ITEM, new Identifier("moretools", "copper_nugget"), CopperNugget.COPPER_NUGGET);
+
+		Registry.register(Registry.BLOCK, new Identifier("moretools", "bedrock_ore"), BedrockOre.BEDROCK_ORE);
+		Registry.register(Registry.ITEM, new Identifier("moretools", "bedrock_ore"), new BlockItem(BedrockOre.BEDROCK_ORE, new FabricItemSettings().group(MORE_TOOLS_GROUP)));
 
 		CopperArmor.register();
 
